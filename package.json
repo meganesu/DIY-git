@@ -4,7 +4,9 @@
   "description": "A project that tries to recreate simple Git commands.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/**.spec.js"
+    "test": "mocha **/*.spec.js",
+    "lint": "eslint '**/*.js'",
+    "lint-fix": "eslint '**/*.js' --fix"
   },
   "keywords": [
     "git"
@@ -23,8 +25,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint && npm test"
     }
   },
   "dependencies": {
