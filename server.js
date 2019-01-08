@@ -5,9 +5,10 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/hello_world.html');
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 app.post('/api/v1/run-command', (req, res) => {

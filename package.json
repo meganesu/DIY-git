@@ -2,12 +2,13 @@
   "name": "diy-git",
   "version": "1.0.0",
   "description": "A project that tries to recreate simple Git commands.",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "mocha **/*.spec.js",
+    "build": "webpack",
     "lint": "eslint 'src/**/*.js'",
     "lint-fix": "eslint 'src/**/*.js' --fix",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha **/*.spec.js"
   },
   "keywords": [
     "git"
@@ -22,7 +23,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.2.1",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1"
   },
   "husky": {
     "hooks": {
