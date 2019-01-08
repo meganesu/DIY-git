@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 const express = require('express');
 
 const app = express();
@@ -8,7 +7,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.sendFile('Hello world!');
+  res.sendFile(__dirname + '/views/hello_world.html');
 });
 
 app.post('/api/v1/run-command', (req, res) => {
