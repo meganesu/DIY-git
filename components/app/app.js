@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import React from 'react';
+import CommandLine from '../command-line/command-line';
 
 const styles = {
   app: {
@@ -7,16 +8,15 @@ const styles = {
   },
 };
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <div style={styles.app}>
-          Welcome to React!
-        </div>
+const App = () => {
+  return (
+    <div>
+      <div style={styles.app}>
+        <p>Welcome to React!</p>
       </div>
-    );
-  }
-}
+      <CommandLine />
+    </div>
+  );
+};
 
 export default App;
