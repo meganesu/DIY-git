@@ -1,10 +1,7 @@
 import React from 'react';
 
-const CommandLine = () => {
-  return (
-    <div id='command-line'>
-    </div>
-  );
-};
+const CommandLine = () => (
+  <div id="command-line" />
+);
 
 export default CommandLine;

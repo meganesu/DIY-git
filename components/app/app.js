@@ -8,15 +8,13 @@ const styles = {
   },
 };
 
-const App = () => {
-  return (
-    <div>
-      <div style={styles.app}>
-        <p>Welcome to React!</p>
-      </div>
-      <CommandLine />
+const App = () => (
+  <div>
+    <div style={styles.app}>
+      <p>Welcome to React!</p>
     </div>
-  );
-};
+    <CommandLine />
+  </div>
+);
 
 export default App;
