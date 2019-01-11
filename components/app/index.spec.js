@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
-import App from './app';
+import App from '.';
 
 describe('<App />', () => {
   const app = mount(<App />);

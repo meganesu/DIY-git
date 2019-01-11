@@ -1,19 +1,19 @@
 import React from 'react';
-import CommandLine from '../command-line/command-line';
+import CommandLine from '../command-line';
 
 const styles = {
   app: {
-    paddingTop: 40,
+    padding: 40,
     textAlign: 'center',
+    border: '1px solid black',
   },
 };
 
 const App = () => (
   <div>
     <div style={styles.app}>
-      <p>Welcome to React!</p>
+      <CommandLine />
     </div>
-    <CommandLine />
   </div>
 );
 
