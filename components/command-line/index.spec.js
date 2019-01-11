@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
-import CommandLine from './command-line';
+import CommandLine from '.';
 
 describe('<CommandLine />', () => {
   const app = mount(<CommandLine />);
