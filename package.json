@@ -37,7 +37,8 @@
     "mocha": "^5.2.0",
     "react-test-renderer": "^16.7.0",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-middleware": "^3.5.0"
   },
   "husky": {
     "hooks": {
