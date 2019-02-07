@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "build": "webpack",
-    "build-dev": "webpack --mode=development",
+    "build-dev": "NODE_ENV=development webpack",
+    "dev": "NODE_ENV=development node server.js",
     "lint": "eslint '{src,components}/**/*.js'",
     "lint-fix": "eslint '{src,components}/**/*.js' --fix",
     "start": "node server.js",

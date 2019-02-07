@@ -7,17 +7,18 @@ const app = express();
 const port = 3000;
 
 const config = require('./webpack.config.js');
+
 const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
 }));
 
 app.use(express.json());
 app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/dist/index.html');
+  res.sendFile(`${__dirname}/dist/index.html`);
 });
 
 app.post('/api/v1/run-command', (req, res) => {
