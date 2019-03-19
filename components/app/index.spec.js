@@ -6,7 +6,7 @@ import App from '.';
 describe('<App />', () => {
   const app = mount(<App />);
   it('should render a command line interface', () => {
-    expect(app.exists('#command-line')).to.be.true;
+    expect(app.exists('CommandLine')).to.be.true;
   });
   xit('should render a visual git history');
   xit('should render staging contents');
