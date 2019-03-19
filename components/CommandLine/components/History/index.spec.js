@@ -6,13 +6,13 @@ import InputRow from '../InputRow';
 import OutputRow from '../OutputRow';
 
 describe('History', () => {
-  describe('when the state is empty', () => {
+  describe('when props are empty', () => {
     const wrapper = mount(<History />);
     it('should not render anything', () => {
       expect(wrapper.isEmptyRender()).to.be.true;
     });
   });
-  describe('when the state has contents', () => {
+  describe('when history prop has contents', () => {
     const historyProps = {
       history: [
         {
@@ -26,6 +26,9 @@ describe('History', () => {
       ],
     };
     const wrapper = mount(<History {...historyProps} />);
+    it('should render something', () => {
+      expect(wrapper.isEmptyRender()).to.be.false;
+    });
     it('should render the contents for each input/output pair', () => {
       wrapper.find(InputRow).forEach((inputRow, index) => {
         expect(inputRow.prop('content')).to.deep.equal(historyProps.history[index].input);
