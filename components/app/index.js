@@ -1,5 +1,5 @@
 import React from 'react';
-import CommandLine from '../command-line';
+import CommandLine from '../CommandLine';
 
 const styles = {
   app: {
