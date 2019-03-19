@@ -10,10 +10,8 @@ const styles = {
 };
 
 const App = () => (
-  <div>
-    <div style={styles.app}>
-      <CommandLine />
-    </div>
+  <div style={styles.app}>
+    <CommandLine />
   </div>
 );
 
