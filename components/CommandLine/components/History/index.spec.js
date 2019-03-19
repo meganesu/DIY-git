@@ -2,9 +2,11 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
 import History from '.';
+import InputRow from '../InputRow';
+import OutputRow from '../OutputRow';
 
 describe('History', () => {
-  describe.only('when the state is empty', () => {
+  describe('when the state is empty', () => {
     const wrapper = mount(<History />);
     it('should not render anything', () => {
       expect(wrapper.isEmptyRender()).to.be.true;
@@ -25,7 +27,12 @@ describe('History', () => {
     };
     const wrapper = mount(<History {...historyProps} />);
     it('should render the contents for each input/output pair', () => {
-      expect(wrapper.isEmptyRender()).to.be.false;
+      wrapper.find(InputRow).forEach((inputRow, index) => {
+        expect(inputRow.prop('content')).to.deep.equal(historyProps.history[index].input);
+      });
+      wrapper.find(OutputRow).forEach((outputRow, index) => {
+        expect(outputRow.prop('content')).to.deep.equal(historyProps.history[index].output);
+      });
     });
   });
 });
