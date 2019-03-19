@@ -1,8 +1,5 @@
 import React from 'react';
-
-const History = () => (
-  <div id="history" />
-);
+import History from './components/History';
 
 const CurrentCommand = () => (
   <div id="current-command" />
