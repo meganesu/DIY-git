@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import InputRow from '.';
 
-describe.only('InputRow', () => {
+describe('InputRow', () => {
   const inputRowProps = {
     content: 'This is the text to render',
   };
