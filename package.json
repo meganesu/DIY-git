@@ -5,12 +5,12 @@
   "private": "true",
   "scripts": {
     "build": "webpack",
-    "build-dev": "NODE_ENV=development webpack",
-    "dev": "NODE_ENV=development node server.js",
+    "build-dev": "cross-env NODE_ENV=development webpack",
+    "dev": "cross-env NODE_ENV=development node server.js",
     "lint": "eslint '{src,components}/**/*.js'",
     "lint-fix": "eslint '{src,components}/**/*.js' --fix",
     "start": "node server.js",
-    "test": "NODE_ENV=test mocha --require babel-register ./components/spec-helper.js {src,components}/**/*.spec.js"
+    "test": "cross-env NODE_ENV=test mocha --require babel-register ./components/spec-helper.js {src,components}/**/*.spec.js"
   },
   "keywords": [
     "git"
@@ -26,6 +26,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.11.0",
