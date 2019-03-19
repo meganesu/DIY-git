@@ -7,8 +7,8 @@
     "build": "webpack",
     "build-dev": "cross-env NODE_ENV=development webpack",
     "dev": "cross-env NODE_ENV=development node server.js",
-    "lint": "eslint '{src,components}/**/*.js'",
-    "lint-fix": "eslint '{src,components}/**/*.js' --fix",
+    "lint": "cross-env eslint '{src,components}/**/*.js'",
+    "lint-fix": "cross-env eslint '{src,components}/**/*.js' --fix",
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --require babel-register ./components/spec-helper.js {src,components}/**/*.spec.js"
   },
