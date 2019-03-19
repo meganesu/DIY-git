@@ -7,5 +7,5 @@ Progress tracked at <https://trello.com/b/HsbXAc2T/diy-git>
 # Installing
 
 1. Clone this repo.
-1. Open a console. From the root directory, run `npm start` to start up the Express server that hosts the app locally.
+1. Open a console. From the root directory, run `npm run dev` to start up the Express server that hosts the app locally.
 1. In a browser, go to `localhost:3000` to see the app running!
