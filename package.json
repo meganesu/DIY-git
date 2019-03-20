@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=development node server.js",
     "lint": "cross-env eslint '{src,components}/**/*.js'",
     "start": "node server.js",
-    "test": "cross-env NODE_ENV=test mocha --require babel-register ./components/spec-helper.js {src,components}/**/*.spec.js"
+    "test": "cross-env NODE_ENV=test mocha --require babel-register ./components/spec-helper.js '{src,components}/**/*.spec.js'"
   },
   "keywords": [
     "git"
