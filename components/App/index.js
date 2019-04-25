@@ -3,9 +3,10 @@ import CommandLine from '../CommandLine';
 
 const styles = {
   app: {
-    padding: 40,
+    boxSizing: 'border-box',
     textAlign: 'center',
     border: '1px solid black',
+    height: '100vh',
   },
 };
 
