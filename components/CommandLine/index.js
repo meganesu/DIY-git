@@ -9,6 +9,12 @@ class CommandLine extends React.Component {
     this.state = {
       console: [],
     };
+    this.ref = React.createRef();
+  }
+
+  componentDidUpdate() {
+    const element = this.ref.current;
+    element.scrollTop = element.scrollHeight;
   }
 
   addInputToConsole(value) {
@@ -22,14 +28,17 @@ class CommandLine extends React.Component {
 
   render() {
     const styles = {
+      boxSizing: 'border-box',
       textAlign: 'left',
       padding: '0.5rem',
+      height: '100%',
+      overflow: 'scroll',
     };
 
     const { console } = this.state;
 
     return (
-      <div id="command-line" style={styles}>
+      <div id="command-line" style={styles} ref={this.ref}>
         <History history={console} />
         <CurrentCommand handleEnter={this.addInputToConsole} />
       </div>
