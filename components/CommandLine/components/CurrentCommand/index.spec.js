@@ -29,7 +29,7 @@ describe('CurrentCommand', () => {
         expect(wrapper.find('input').props().value).to.deep.equal('text!');
       });
     });
-    describe('when the user presses enter', () => {
+    describe('when the user types something and presses enter', () => {
       const textEntered = 'text!';
 
       beforeEach(() => {
@@ -48,6 +48,14 @@ describe('CurrentCommand', () => {
       });
       it('clears the input text', () => {
         expect(wrapper.find('input').props().value).to.deep.equal('');
+      });
+    });
+    describe('when the user presses enter without typing anything first', () => {
+      beforeEach(() => {
+        wrapper.find('input').simulate('keypress', { key: 'Enter' });
+      });
+      it('does not call the handleEnter prop', () => {
+        expect(handleEnterStub.called).to.be.false;
       });
     });
   });

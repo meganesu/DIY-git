@@ -15,7 +15,7 @@ class CurrentCommand extends React.Component {
   handleKeyPress(event) {
     const { value } = this.state;
     const { handleEnter } = this.props;
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && value !== '') {
       handleEnter(value);
       this.setState({
         value: '',
