@@ -33,6 +33,7 @@ class CommandLine extends React.Component {
       padding: '0.5rem',
       height: '100%',
       overflow: 'scroll',
+      fontFamily: 'Courier New, monospace',
     };
 
     const { console } = this.state;

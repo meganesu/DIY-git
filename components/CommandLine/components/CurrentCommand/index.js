@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Prompt from '../Prompt';
 
 class CurrentCommand extends React.Component {
   constructor(props) {
@@ -30,12 +31,19 @@ class CurrentCommand extends React.Component {
 
   render() {
     const { value } = this.state;
+    const inputStyles = {
+      fontFamily: 'Courier New, monospace',
+      fontSize: '1rem',
+      border: '0px',
+    };
     return (
       <Fragment>
+        <Prompt />
         <input
           value={value}
           onKeyPress={this.handleKeyPress}
           onChange={this.handleChange}
+          style={inputStyles}
         />
       </Fragment>
     );
