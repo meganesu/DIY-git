@@ -40,10 +40,12 @@ class CurrentCommand extends React.Component {
       <Fragment>
         <Prompt />
         <input
+          type="text"
           value={value}
           onKeyPress={this.handleKeyPress}
           onChange={this.handleChange}
           style={inputStyles}
+          aria-label="Command Line"
         />
       </Fragment>
     );
