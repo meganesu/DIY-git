@@ -20,7 +20,7 @@ class CommandLine extends React.Component {
   addInputToConsole(value) {
     const newRow = {
       input: value,
-      output: value,
+      output: `You typed: '${value}'`,
     };
 
     this.setState(prevState => prevState.console.push(newRow));
