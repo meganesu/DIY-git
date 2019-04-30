@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/v1/run-command', (req, res) => {
-  const { command } = req.body.command;
+  const { command } = req.body;
   res.json({
     status: 'success',
     command,
